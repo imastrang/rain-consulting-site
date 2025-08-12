@@ -1,1 +1,55 @@
+/* Reset */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#333;
+  --bg:#f0ebe6;       /* Neutral Beige */
+  --brand:#004d26;    /* Dark Dark Green */
+  --brand-2:#dbebd0;  /* Light Muted Green */
+  --panel:#fff;
+  --border:#ccc;
+  --shadow:0 4px 8px rgba(0,0,0,.2);
+}
+body{font-family:'Open Sans',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+
+/* Header + Nav (fixed) */
+header{background:var(--brand);color:#fff;position:fixed;inset:0 0 auto 0;z-index:1000}
+nav ul{list-style:none;display:flex;justify-content:flex-end;gap:20px;padding:.85rem 20px}
+nav a{color:#fff;text-decoration:none;font-family:'Poppins',sans-serif;font-weight:600}
+
+/* Keep content below fixed header */
+main{padding-top:64px}
+
+/* Sections */
+.full-page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px 20px;text-align:center;scroll-margin-top:72px}
+.with-background{background:url('assets/hero.jpg') center/cover no-repeat}
+.content-overlay{max-width:900px}
+
+/* Button */
+.btn{display:inline-block;margin-top:16px;padding:.75rem 1rem;border-radius:10px;background:var(--brand);color:#fff;font-weight:700;text-decoration:none}
+.btn:hover{background:var(--brand-2);color:#0b0f19}
+
+/* Insights (cards) */
+.card-layout .card-container{display:flex;justify-content:space-around;flex-wrap:wrap;gap:20px}
+.card-layout .card{background:var(--panel);border-radius:10px;box-shadow:var(--shadow);padding:20px;width:300px;height:200px;transition:transform .2s ease,box-shadow .2s ease}
+.card-layout .card.hover-effect{transform:translateY(-4px);box-shadow:0 12px 24px rgba(0,0,0,.22)}
+
+/* Experience */
+.interactive-experience .experience-container{display:flex;flex-direction:column;gap:20px}
+
+/* Skills grid */
+.skills-grid .grid-container{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
+.skills-grid .grid-item{background:var(--brand-2);border-radius:10px;padding:20px;min-width:260px;flex:1 1 300px;transition:transform .3s ease}
+.skills-grid .grid-item:hover{transform:scale(1.05)}
+
+/* Contact */
+.contact-section .contact-form{background:var(--panel);padding:20px;border-radius:8px;box-shadow:0 4px 8px rgba(0,0,0,.1);width:min(640px,92vw);margin:auto}
+input,textarea,button{width:100%;padding:10px;margin-bottom:10px;border:1px solid var(--border);border-radius:4px;font:inherit}
+button{background:var(--brand);color:#fff;border:none;cursor:pointer;font-weight:700}
+button:hover{background:var(--brand-2);color:#0b0f19}
+
+/* Responsive */
+@media (max-width:768px){
+  nav ul{flex-direction:column;align-items:flex-end;gap:10px;padding:10px 16px}
+  .card-layout .card-container{flex-direction:column;align-items:center}
+}
 
